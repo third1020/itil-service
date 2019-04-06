@@ -44,15 +44,16 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                            @if (Route::has('register'))
+                            <!-- @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
-                            @endif
+                            @endif -->
                         @else
                         <!-- เดียวเปลี่ยน -->
                         <!-- บทบาทadmin -->
                             @role('admin')
+                                <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                                 <li><a href="#" class="nav-link">admin panel</a></li>
                             @endrole
                         <!-- บทบาทadmin -->
